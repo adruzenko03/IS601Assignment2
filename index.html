@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 2</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav>
         <button onclick="swapView(1)">Question 1</button>
@@ -13,7 +15,15 @@
         <button onclick="swapView(3)">Question 3</button>
     </nav>
     <div id="Q1">
-        1
+        <h2>Question 1: Reversing Strings</h2>
+
+        <label for="inp1">Enter the string to reverse</label>
+        <input type="text" id="inp1" />
+        <button onclick="reverseString()">Submit</button>
+        <br>
+        <p><b>Result:</b><br> 
+            <span id="out1"></span>
+        </p>
     </div>
 
     <div id="Q2" class="hide">
@@ -26,4 +36,5 @@
 
     <script src="index.js"></script>
 </body>
+
 </html>
