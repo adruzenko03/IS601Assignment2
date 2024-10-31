@@ -22,6 +22,7 @@ function reverseString(){
 
 function palindrome(){
     let inp=document.getElementById("inp2").value.split("")
+    if(inp.length==0){return}
     for(let i=0;i<inp.length/2;i++){
         if(inp[i]!=inp[inp.length-i-1]){
              document.getElementById("out2").innerText="This is not a palindrome!"
@@ -34,5 +35,7 @@ function palindrome(){
 function tipCalculator(){
     let subtotal=parseFloat(document.getElementById("inp3sub").value)
     let tipPercent=parseFloat(document.getElementById("inp3tip").value)
-    document.getElementById("out3").innerText="$"+(subtotal+Math.round(subtotal*tipPercent)/100)
+
+    if(isNaN(subtotal) || isNaN(tipPercent)){return}
+    document.getElementById("out3").innerText="$"+(subtotal+subtotal*tipPercent/100).toFixed(2)
 }
