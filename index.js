@@ -20,3 +20,14 @@ function reverseString(){
     document.getElementById("out1").innerText=ret
 }
 
+function palindrome(){
+    let inp=document.getElementById("inp2").value.split("")
+    for(let i=0;i<inp.length/2;i++){
+        if(inp[i]!=inp[inp.length-i-1]){
+             document.getElementById("out2").innerText="This is not a palindrome!"
+             return
+        }
+    }
+    document.getElementById("out2").innerText="This is a palindrome!"
+    
+}
