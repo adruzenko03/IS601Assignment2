@@ -29,5 +29,10 @@ function palindrome(){
         }
     }
     document.getElementById("out2").innerText="This is a palindrome!"
-    
+}
+
+function tipCalculator(){
+    let subtotal=parseFloat(document.getElementById("inp3sub").value)
+    let tipPercent=parseFloat(document.getElementById("inp3tip").value)
+    document.getElementById("out3").innerText="$"+(subtotal+Math.round(subtotal*tipPercent)/100)
 }
